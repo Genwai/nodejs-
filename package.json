@@ -1,0 +1,27 @@
+{
+  "name": "mqtt",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "active-x-obfuscator": "0.0.1",
+    "base64id": "^0.1.0",
+    "commander": "^0.6.1",
+    "crypto": "^1.0.1",
+    "express": "^4.16.2",
+    "policyfile": "0.0.4",
+    "redis": "^0.7.3",
+    "socket.io": "^2.0.4",
+    "socket.io-client": "^0.9.16",
+    "tinycolor": "0.0.1",
+    "uglify": "^0.1.5",
+    "ws": "^0.4.27",
+    "xmlhttprequest": "^1.4.2"
+  }
+}

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+
+</head>
+
+<body>
+    oid(ID):<span id="temp">??</span>
+    <hr> deviceType(设备类型):
+    <span id="hum">??</span>
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.0.4/socket.io.slim.js"></script>
+<script src="http://cdn.bootcss.com/jquery/1.11.2/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+
+
+<script>
+    $(function() {
+        var socket = io.connect('http://localhost:3000');
+        socket.on('mqtt', function(data) {
+            console.log(data)
+            var json = JSON.parse(data.message);
+
+            $("#temp").html(json.deviceType);
+            $("#hum").html(json.location);
+            console.log('data.msg', json);
+        });
+    });
+</script>
+
+</html>
